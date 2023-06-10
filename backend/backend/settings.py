@@ -13,7 +13,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
 # ALLOWED_HOSTS = ['158.160.64.140', '127.0.0.1', 'localhost', 'taski-mario.hopto.org']
-# print(ALLOWED_HOSTS)
+#  print(ALLOWED_HOSTS)
 # Application definition
 
 INSTALLED_APPS = [
