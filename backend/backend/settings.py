@@ -3,18 +3,16 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
-load_dotenv(dotenv_path)
+load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-j_89af+30&&4qm*8z9_(^zz8p4-ho8z_m6ylm0s$h!-p@on1_^'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = True
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
 # ALLOWED_HOSTS = ['158.160.64.140', '127.0.0.1', 'localhost', 'taski-mario.hopto.org']
-#  print(ALLOWED_HOSTS)
 # Application definition
 
 INSTALLED_APPS = [
